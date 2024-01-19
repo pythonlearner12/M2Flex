@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Drawing</title>
+</head>
+<body>
+
+<canvas id="canvas" width="400" height="400" style="border:1px solid #000;"></canvas>
+
+<script>
+  let canvas = document.getElementById("canvas");
+  let g = canvas.getContext("2d");
+
+  // Load an image
+  let img = new Image();
+  img.src = "snakes_ladders_trophy.png"; // Replace with the actual path to your image
+
+  // Draw the image when it's loaded
+  img.onload = function() {g.drawImage(img, 0, 0, canvas.width, canvas.height);};
+</script>
+
+</body>
+</html>
